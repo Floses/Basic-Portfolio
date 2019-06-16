@@ -1,0 +1,7 @@
+/* Resetting our page size and setting the width of our page content to 960 pixels */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 960px;
+}
