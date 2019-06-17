@@ -1,18 +1,197 @@
-/* Resetting our page size and setting the width of our page content to 960 pixels */
+/* setting the height for our document, this will help us achieve our sticky footer effect */
 
-body {
-    margin: 0;
-    padding: 0;
+html, body {
+    height: 100%;
 }
 
-/* Defining our header's background color */
+/* defining our header attributes, note that we want the content to be a certain width */
 
-.header {
-    background: navy;
-    height: 100px;
-    padding-top: 10px;
+#headSize {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
 }
+
+/* decided to style the header text seperately to avoid confusion */
 
 #name {
-    background: maroon;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 45%;
+    background: navy;
+    float: left;
+}
+
+/* telling our nav to go to the right of the page */
+
+nav {
+    float: right;
+}
+
+/* since we are using a list, we want to reset everthing so it's not bulleted */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* here we are changing our list to display side-by-side and allowing us to position */
+
+nav li {
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: 35px;
+
+    position: relative;
+}
+
+/* we style our font to our liking */
+
+nav a {
+    font-weight: bolder;
+    color: gray;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* here we add a mouse hover effect that changes the color of our text upon hover */
+
+nav a:hover {
+    color: navy;
+}
+
+/* we are creating a block of solid color above our nav buttons at a fixed position and allowing them to transition */
+
+nav a::before {
+    content:"";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: navy;
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+/* saying when we hover over our nav items our block will display to 100% works with our transition */
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* Clearing our above floats and adding our main page background image */
+
+#main {
+    overflow: auto;
+    clear: both;
+    background-image: url("../images/morocco.png");
+    min-height: 100%;
+    border-top: 5px solid gray;
+    display: flex;
+    flex-direction: column;
+}
+
+/* this is setting the box for our main content about me section */
+
+#container {
+    height: auto;
+    overflow: auto;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background: white;
+}
+
+/* setting our title header styling for about me */
+
+#aboutMe {
+    color: navy;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 97%;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+/* adding our picture and moving it left */
+
+#picture {
+    padding: 10px;
+    height: 200px;
+    width: 175px;
+    float: left;
+}
+
+#game {
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    float: left;
+}
+
+#gameTag {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: navy;
+    background: lightgray;
+    opacity: .8;
+    width: 300px;
+    position: relative;
+    left: 20px;
+    bottom: 110px;
+}
+
+#fanTag {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: navy;
+    background: lightgray;
+    opacity: .8;
+    width: 300px;
+    position: relative;
+    left: 360px;
+    bottom: 168px;
+}
+
+#fanpage {
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+}
+
+#more {
+    text-align: center;
+    font-size: 75px;
+    color: navy;
+    font-weight: bold;
+}
+
+/* setting our footer styling as well as changing the properties so it stays at the bottom of the page */
+
+#footer {
+    border-top: 5px solid gray;
+    background: navy;
+    padding-bottom: 5px;
+    margin-top: auto;
+    clear: both;
+}
+
+/* throwing on a copyright logo to our footer */
+
+#copyright {
+    text-align: center;
+    color: white;
+    padding: 20px;
 }
