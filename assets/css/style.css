@@ -16,7 +16,7 @@ html, body {
 /* decided to style the header text seperately to avoid confusion */
 
 #name {
-    padding: 10px;
+    padding: 5px;
     color: white;
     text-align: center;
     width: 45%;
@@ -92,7 +92,7 @@ nav a:hover::before {
     clear: both;
     background-image: url("../images/morocco.png");
     min-height: 100%;
-    border-top: 5px solid gray;
+    border-top: 8px solid gray;
     display: flex;
     flex-direction: column;
 }
@@ -105,8 +105,10 @@ nav a:hover::before {
     width: 960px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     background: white;
+    border: 1px solid navy;
 }
 
 /* setting our title header styling for about me */
@@ -116,19 +118,99 @@ nav a:hover::before {
     content: "";
     display: block;
     margin: 0 auto;
-    width: 97%;
+    width: 95%;
     padding: 10px;
     border-bottom: 1px solid lightgray;
 }
 
-/* adding our picture and moving it left */
+/* this picture is for our index page */
 
 #picture {
-    padding: 10px;
-    height: 200px;
-    width: 175px;
+    margin: 30px 20px 5px 10px; 
+    height: 250px;
+    width: 220px;
     float: left;
 }
+
+/* styling the text for the index page bio */
+
+#bio {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: navy;
+    padding: 5px;
+}
+
+/* this form is for our contact page */
+
+#form {
+    padding-left: 1.5%;
+}
+
+.info {
+    color: rgb(104, 104, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    border: 1px solid navy;
+    width: 98%;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 200, 0.5);
+}
+
+textarea {
+    border: 1px solid navy;
+    width: 49%;
+    height: 150px;
+    resize: both;
+    max-width: 98%;
+    max-height: 300px;
+}
+
+textarea:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 200, 0.5);
+}
+
+#submit {
+    margin: 2% 1.5% 2% 1.5%;
+    padding: 1% 2% 1% 2%;
+    border-radius: 20px;
+    background: white;
+    color: navy;
+    border: 2px solid navy;
+    text-decoration: none;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background: navy;
+    color: white;
+}
+
+#reset {
+    margin: 2% 1.5% 2% 1.5%;
+    padding: 1% 2% 1% 2%;
+    border-radius: 20px;
+    background: white;
+    color: navy;
+    border: 2px solid navy;
+    text-decoration: none;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+#reset:hover {
+    cursor: pointer;
+    background: red;
+    color: white;
+}
+
+/* styling our pictures for our portfolio page */
 
 #game {
     padding: 20px;
@@ -181,7 +263,7 @@ nav a:hover::before {
 /* setting our footer styling as well as changing the properties so it stays at the bottom of the page */
 
 #footer {
-    border-top: 5px solid gray;
+    border-top: 8px solid gray;
     background: navy;
     padding-bottom: 5px;
     margin-top: auto;
@@ -193,5 +275,5 @@ nav a:hover::before {
 #copyright {
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
